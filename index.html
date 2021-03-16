@@ -12,7 +12,7 @@
     <div class="navbar">
       <div class="container">
         <a href="index.html"
-          ><img src="assets/images/logo.png" alt="ULC Hosting"
+          ><img src="assets/images/logo.png" alt="ULC Hosting" class="logo"
         /></a>
 
         <img
@@ -26,8 +26,8 @@
           <img
             src="assets/images/menu-open.svg"
             alt="Open Menu"
-            id="mobile-cta-closed"
-            class="mobile-menu-closed"
+            id="mobile-cta-open"
+            class="mobile-menu-open"
           />
 
           <ul class="first-nav">
@@ -56,18 +56,22 @@
               ><img
                 src="assets/images/video-camera.svg"
                 alt="Watch a video "
+                class="camera-icon"
               />Watch a video</a
             >
           </div>
         </div>
-
-        <img src="assets/images/web-hosting.jpg" alt="Web Hosting" />
+        <img
+          src="assets/images/web-hosting.jpg"
+          alt="Web Hosting"
+          class="web-hosting-img"
+        />
       </div>
     </section>
 
     <section class="features-section">
       <div class="container">
-        <ul>
+        <ul class="features-list">
           <li>99.99% Uptime</li>
           <li>Real SSD Storage</li>
           <li>Updated Apache and PHP software</li>
@@ -167,5 +171,15 @@
         </div>
       </div>
     </section>
+
+    <script>
+      const mobileBtn = document.getElementById("mobile-cta-open");
+      nav = document.querySelector("nav");
+      mobileBtnExit = document.getElementById("mobile-cta-closed");
+
+      mobileBtn.addEventListener("Click", () => {
+        nav.classList.add("menu-btn");
+      });
+    </script>
   </body>
 </html>
